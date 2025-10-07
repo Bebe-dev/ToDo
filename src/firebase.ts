@@ -4,7 +4,7 @@ import { getFirestore } from "firebase/firestore";
 
 // Your Firebase configuration object
 const firebaseConfig = {
-    apiKey: "AIzaSyA2ttFW_sNSAuLuQHXfsA96BENTkM_habo",
+    apiKey: import.meta.env.VITE_API_KEY,
     authDomain: "todo-745db.firebaseapp.com",
     projectId: "todo-745db",
     storageBucket: "todo-745db.firebasestorage.app",

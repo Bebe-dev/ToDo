@@ -10,7 +10,7 @@ function App() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((currentUser) => {
+    const unsubscribe = auth.onAuthStateChanged((currentUser:any) => {
       setUser(currentUser);
     });
     return () => unsubscribe(); // Cleanup listener on unmount

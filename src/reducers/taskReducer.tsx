@@ -1,7 +1,19 @@
 
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
+type Task = {
+  id: number;
+  title: string;
+  date: string;
+  description: string;
+};
+
+type TasksState = {
+  tasks: Task[];
+  completedTasks: Task[];
+};
+
+const initialState:TasksState = {
   tasks: [
     { id: 1, title: "Task title", date: "2024-12-14", description: "Describe your task" },
     

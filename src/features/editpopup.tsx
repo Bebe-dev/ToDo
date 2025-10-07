@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { deleteTask, updateTask } from "../reducers/taskReducer";
 //import { RootState } from "@reduxjs/toolkit/query";
 
-export default function EditPopup({ task, onClose }) {
+export default function EditPopup({ task, onClose }:any) {
   const dispatch = useDispatch();
   const [title, setTitle] = useState(task.title);
   const [description, setDescription] = useState(task.description);

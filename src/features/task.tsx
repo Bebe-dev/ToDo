@@ -3,17 +3,26 @@ import { Calendar, Circle } from "tabler-icons-react";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../store";
 import { completeTask } from "../reducers/taskReducer";
-import { SetStateAction, useState } from "react";
+import { useState } from "react";
 import EditPopup from "./editpopup";
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
+type Task = {
+  id: number;
+  title: string;
+  date: string;
+  description: string;
+};
+
+
 export default function Tasks() {
+  
   const tasks = useSelector((state: RootState) => state.tasks.tasks);
 
-  const [selectedTask, setSelectedTask] = useState(null);
+  const [selectedTask, setSelectedTask] = useState<Task | null>(null);
 
-  const handleTaskClick = (task: SetStateAction<null>) => {
+  const handleTaskClick = (task: Task) => {
     setSelectedTask(task);
   };
 

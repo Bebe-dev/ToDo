@@ -61,7 +61,7 @@ export default function SignUp() {
               ),
             confirmPassword: Yup.string()
               .required("Confirm Password is required")
-              .oneOf([Yup.ref("password"), null], "Passwords must match"),
+              .oneOf([Yup.ref("password")], "Passwords must match"),
             agree: Yup.boolean()
               .oneOf([true], "You must agree to the terms")
               .required("Required"),
